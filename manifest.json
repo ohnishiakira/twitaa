@@ -1,0 +1,14 @@
+{
+  "name": "twitaa.in",
+  "description": "Throw ASCII Art to twitaa.in",
+  "version": "0.0.1",
+  "icons": {
+    "16": "icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "http://www.twitaa.in/"
+  ],
+  "background_page": "background.html"
+}
