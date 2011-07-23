@@ -6,7 +6,7 @@ function toTwitAA(aa) {
   var formdata = new FormData();
   var xhr = new XMLHttpRequest();
 
-  formdata.append('asciiart', aa);
+  formdata.append("asciiart", aa);
 
   xhr.open("POST", "http://www.twitaa.in/post");
   xhr.onreadystatechange = function() {
