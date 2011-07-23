@@ -1,18 +1,13 @@
-function createTab(url) {
-  chrome.tabs.create({url: url});
-}
-
-function toTwitAA(aa) {
+function toTwitAA(info) {
   var formdata = new FormData();
   var xhr = new XMLHttpRequest();
 
-  formdata.append("asciiart", aa);
+  formdata.append("asciiart", info.selectionText);
 
   xhr.open("POST", "http://www.twitaa.in/post");
   xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4) {
-      console.log(xhr.responseText);
-      createTab(xhr.responseText.match(new RegExp("http://twitaa.in/\\?v=.[^\"]*"))[0]);
+    if (xhr.readyState == xhr.DONE) {
+      chrome.tabs.create({url: xhr.responseText.match(/http:\/\/twitaa.in\/\?v=[^\"]*"/)});
     }
   }
   xhr.send(formdata);
@@ -21,8 +16,5 @@ function toTwitAA(aa) {
 chrome.contextMenus.create({
   title: "twitaa.in",
   contexts: ["selection"],
-  onclick: function(info, tab) {
-    console.log("selection text: " + info.selectionText);
-    toTwitAA(info.selectionText);
-  }
+  onclick: toTwitAA
 });
