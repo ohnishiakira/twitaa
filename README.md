@@ -1,5 +1,5 @@
 # twitaa
-Throw ASCII Art to twitaa.in
+AA(ASCII Art)をtwitaa.inに投げるchrome拡張
 
 # 使い方
 * AAを選択して右クリック
