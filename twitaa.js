@@ -7,7 +7,7 @@ function toTwitAA(info) {
   xhr.open("POST", "http://www.twitaa.in/post");
   xhr.onreadystatechange = function() {
     if (xhr.readyState == xhr.DONE) {
-      chrome.tabs.create({url: xhr.responseText.match(/http:\/\/twitaa.in\/\?v=[^\"]*/)[0]});
+      chrome.tabs.create({url: xhr.responseText.match(/http:\/\/twitaa.in\/\?v=[^"]*/)[0]});
     }
   }
   xhr.send(formdata);
