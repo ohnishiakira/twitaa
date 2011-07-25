@@ -6,7 +6,6 @@ function storeAAUrl(aaUrl) {
   }
 
   aaList["aa"] = aaList["aa"] || [];
-
   aaList["aa"].push(aaUrl);
 
   localStorage["aa"] = JSON.stringify(aaList);
