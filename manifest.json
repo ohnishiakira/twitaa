@@ -1,6 +1,6 @@
 {
   "name": "twitaa.in",
-  "description": "Throw ASCII Art to twitaa.in",
+  "description": "Post ASCII Art to twitaa.in",
   "version": "0.0.1",
   "icons": {
     "16": "icon.png"
