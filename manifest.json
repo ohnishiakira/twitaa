@@ -1,8 +1,8 @@
 {
   "name": "twitaa.in",
-  "description": "Post ASCII Art to twitaa.in",
   "version": "0.0.1",
   "manifest_version": 2,
+  "description": "Post ASCII Art to twitaa.in",
   "icons": {
     "16": "icon.png"
   },
